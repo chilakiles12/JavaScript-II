@@ -457,13 +457,20 @@ const runners = [
 
 // ==== Challenge 1: Use .forEach() ====
 // The event director needs both the first and last names of each runner for their running bibs.  Combine both the first and last names into a new array called fullName.
+//how do i put all this into an array, or object?
 function callback(nameObj) {
-  console.log(`${nameObj.first_name}`, `${nameObj.last_name}`);
+  return `${nameObj.first_name} ${nameObj.last_name}`;
 }
+// let fullName = [];
 // for (let i = 0; i < runners.length; i++) {
-//   callback(runners[i]);
+//   let bestNameString = callback(runners[i]);
+//   fullName.push(bestNameString);
 // }
-runners.forEach(callback);
+
+// console.log(fullName);
+let fullName = runners.map(callback);
+console.log(fullName);
+// runners.forEach(callback);
 
 // ==== Challenge 2: Use .map() ====
 // The event director needs to have all the runner's first names converted to uppercase because the director BECAME DRUNK WITH POWER. Convert each first name into all caps and log the result
